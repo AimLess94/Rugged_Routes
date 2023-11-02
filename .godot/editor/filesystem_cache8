@@ -1,8 +1,19 @@
 2a60927148abd1d33b818b535e306557
-::res://::1698924752
-Board.gd::GDScript::-1::1698891831::0::1::::<>Node2D<>::
-Board.tscn::PackedScene::8406230543759209536::1698893052::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67
+::res://::1698937416
+Board.gd::GDScript::-1::1698927622::0::1::::<>Node2D<>::
+Board.tscn::PackedScene::8406230543759209536::1698937047::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67<>uid://db3tf5nctkarq
+Card.gd::GDScript::-1::1698937047::0::1::::Card<>Node2D<>::
 icon.svg::CompressedTexture2D::3833855046394519279::1698890311::1698890316::1::::<><>::
 player.gd::GDScript::-1::1698891552::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8897988629244706298::1698891887::0::1::::<><>::res://player.gd<>uid://buvfbdsvm2ga6
+player.tscn::PackedScene::8897988629244706298::1698927623::0::1::::<><>::res://player.gd<>uid://buvfbdsvm2ga6
 stone mountain.PNG::CompressedTexture2D::7288417619562713170::1698924752::1698924752::1::::<><>::
+::res://assets/::1698937184
+::res://assets/Cards/::1698937333
+card back red.png::CompressedTexture2D::7573022347888378171::1698937161::1698937203::1::::<><>::
+::res://assets/Cards/Movement/::1698937416
+1.png::CompressedTexture2D::5464322959211297295::1698937331::1698937392::1::::<><>::
+2.png::CompressedTexture2D::9219674571230893542::1698937346::1698937384::1::::<><>::
+3.png::CompressedTexture2D::7774365071946869710::1698937351::1698937399::1::::<><>::
+4.png::CompressedTexture2D::6053005491970180796::1698937356::1698937404::1::::<><>::
+5.png::CompressedTexture2D::237956928907541486::1698937361::1698937410::1::::<><>::
+6.png::CompressedTexture2D::8218407743276117457::1698937368::1698937416::1::::<><>::

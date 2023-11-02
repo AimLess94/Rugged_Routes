@@ -13,7 +13,9 @@ func _physics_process(delta):
 
 
 func _on_move_button_pressed():
-	
+	var deck:Deck = Decks.new().moveAndToolsDeck
+	deck.shuffle()
+	print_debug(deck._to_string())
 	move_player()
 	
 
@@ -34,7 +36,7 @@ func move_player():
 	
 
 
-func _on_card_pressed(movementNumber):
+func _on_card_pressed(movementNumber:int):
 	i=i+movementNumber
 	print_debug(i)
 	move_player()

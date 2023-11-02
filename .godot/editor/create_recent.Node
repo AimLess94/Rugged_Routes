@@ -1,5 +1,6 @@
-Button
 TextureButton
+HBoxContainer
+Button
 ParallaxLayer
 ParallaxBackground
 Sprite2D

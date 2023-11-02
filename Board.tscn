@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr1bnhs61268k"]
+[gd_scene load_steps=6 format=3 uid="uid://dr1bnhs61268k"]
 
 [ext_resource type="Script" path="res://Board.gd" id="1_rwry1"]
 [ext_resource type="PackedScene" uid="uid://dy1itqb3wtb67" path="res://player.tscn" id="2_cj3fg"]
 [ext_resource type="Texture2D" uid="uid://db3tf5nctkarq" path="res://stone mountain.PNG" id="2_hs1r5"]
+[ext_resource type="PackedScene" uid="uid://buons7dyfdoh5" path="res://CardAndDeckInterface.tscn" id="4_ski7r"]
 
 [sub_resource type="Curve2D" id="Curve2D_i4ki0"]
 _data = {
@@ -34,6 +35,7 @@ rotation = 0.365201
 position = Vector2(0, 0)
 
 [node name="move button" type="Button" parent="."]
+visible = false
 offset_left = 24.0
 offset_top = 536.0
 offset_right = 192.0
@@ -41,6 +43,7 @@ offset_bottom = 568.0
 text = "Move Player"
 
 [node name="move 1" type="Button" parent="."]
+visible = false
 offset_left = 330.0
 offset_top = 512.0
 offset_right = 415.0
@@ -48,6 +51,7 @@ offset_bottom = 634.0
 text = "1"
 
 [node name="move 3" type="Button" parent="."]
+visible = false
 offset_left = 431.0
 offset_top = 512.0
 offset_right = 516.0
@@ -55,6 +59,7 @@ offset_bottom = 634.0
 text = "3"
 
 [node name="move 5" type="Button" parent="."]
+visible = false
 offset_left = 535.0
 offset_top = 510.0
 offset_right = 620.0
@@ -62,6 +67,7 @@ offset_bottom = 632.0
 text = "5"
 
 [node name="move 2" type="Button" parent="."]
+visible = false
 offset_left = 638.0
 offset_top = 510.0
 offset_right = 723.0
@@ -69,11 +75,18 @@ offset_bottom = 632.0
 text = "2"
 
 [node name="move 6" type="Button" parent="."]
+visible = false
 offset_left = 747.0
 offset_top = 510.0
 offset_right = 832.0
 offset_bottom = 632.0
 text = "6"
+
+[node name="HBoxContainer" parent="." instance=ExtResource("4_ski7r")]
+offset_left = 154.0
+offset_top = 455.0
+offset_right = 3642.0
+offset_bottom = 927.0
 
 [connection signal="pressed" from="move button" to="." method="_on_move_button_pressed"]
 [connection signal="pressed" from="move 1" to="." method="_on_card_pressed" binds= [1]]
