@@ -1,4 +1,8 @@
+TextureButton
+HBoxContainer
 Button
+ParallaxLayer
+ParallaxBackground
 Sprite2D
 PathFollow2D
 Path2D

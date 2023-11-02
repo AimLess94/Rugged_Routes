@@ -1,4 +1,9 @@
-res://player.tscn
-res://player.gd
 res://Board.tscn
+res://player.tscn
 res://Board.gd
+res://Card.gd
+res://MovementCards.gd
+res://Decks.gd
+res://Deck.gd
+res://CardAndDeckInterface.tscn
+res://CardAndDeckInterface.gd
