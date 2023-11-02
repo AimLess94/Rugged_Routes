@@ -1,7 +1,8 @@
 2a60927148abd1d33b818b535e306557
-::res://::1698893041
+::res://::1698924752
 Board.gd::GDScript::-1::1698891831::0::1::::<>Node2D<>::
-Board.tscn::PackedScene::8406230543759209536::1698892679::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67
+Board.tscn::PackedScene::8406230543759209536::1698893052::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67
 icon.svg::CompressedTexture2D::3833855046394519279::1698890311::1698890316::1::::<><>::
 player.gd::GDScript::-1::1698891552::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::8897988629244706298::1698891887::0::1::::<><>::res://player.gd<>uid://buvfbdsvm2ga6
+stone mountain.PNG::CompressedTexture2D::7288417619562713170::1698924752::1698924752::1::::<><>::
