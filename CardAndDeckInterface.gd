@@ -22,7 +22,7 @@ func _process(delta):
 	pass
 
 func cardPressed(card:Card):
-	$".."._on_card_pressed(card.Effects["MOVE"])
+	$"../.."._on_card_pressed(card.Effects["MOVE"]) #Need to make this work no matter the location of the container
 	#Remove Card From Hand
 	#ADD NEXT CARD TO HAND
 	print_debug("Card Pressed: "+ card._to_string())
