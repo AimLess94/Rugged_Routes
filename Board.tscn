@@ -86,13 +86,7 @@ offset_right = 832.0
 offset_bottom = 632.0
 text = "6"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("4_ski7r")]
-offset_left = 154.0
-offset_top = 455.0
-offset_right = 3642.0
-offset_bottom = 927.0
+[node name="Card & Deck UI" parent="." instance=ExtResource("4_ski7r")]
 
 [connection signal="pressed" from="move button" to="." method="_on_move_button_pressed"]
 [connection signal="pressed" from="move 1" to="." method="_on_card_pressed" binds= [1]]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csied7hdmyn0w"
-path="res://.godot/imported/4.png-0121c93f5db191bf88e6e59e901e08e7.ctex"
+uid="uid://b3g0jbxg1nlgl"
+path="res://.godot/imported/Pressed.png-9270fba875f33f4e644437a6dc46507f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cards/Movement/4.png"
-dest_files=["res://.godot/imported/4.png-0121c93f5db191bf88e6e59e901e08e7.ctex"]
+source_file="res://assets/Cards/Tools/WATER/Pressed.png"
+dest_files=["res://.godot/imported/Pressed.png-9270fba875f33f4e644437a6dc46507f.ctex"]
 
 [params]
 

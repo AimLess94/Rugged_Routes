@@ -1,13 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://buons7dyfdoh5"]
+[gd_scene load_steps=5 format=3 uid="uid://buons7dyfdoh5"]
 
 [ext_resource type="Script" path="res://CardAndDeckInterface.gd" id="1_c2ob1"]
+[ext_resource type="Texture2D" uid="uid://cb2nwjm8445j1" path="res://assets/campfire.png" id="2_aduxo"]
+[ext_resource type="Texture2D" uid="uid://df5oto2vrsfe6" path="res://assets/Cards/card back red.png" id="3_l6jd7"]
+[ext_resource type="Texture2D" uid="uid://ctaj7sehr0cll" path="res://assets/Cards/card back black.png" id="4_0rfpp"]
 
-[node name="HBoxContainer" type="HBoxContainer"]
+[node name="Card & Deck UI" type="CanvasLayer"]
+
+[node name="Player Hand" type="HBoxContainer" parent="."]
 clip_contents = true
-offset_left = 196.0
-offset_top = 458.0
-offset_right = 3076.0
-offset_bottom = 930.0
+offset_left = 126.0
+offset_top = 463.0
+offset_right = 3542.0
+offset_bottom = 1095.0
 scale = Vector2(0.25, 0.25)
 theme_override_constants/separation = 4
 script = ExtResource("1_c2ob1")
+
+[node name="Sacrifice Button" type="TextureButton" parent="."]
+offset_left = 1017.0
+offset_top = 514.0
+offset_right = 1128.0
+offset_bottom = 622.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+texture_normal = ExtResource("2_aduxo")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Action Button" type="Button" parent="."]
+offset_left = 999.0
+offset_top = 461.0
+offset_right = 1141.0
+offset_bottom = 500.0
+text = "Play Card"
+
+[node name="Draw Deck" type="TextureRect" parent="."]
+offset_left = 15.0
+offset_top = 497.0
+offset_right = 99.0
+offset_bottom = 630.0
+texture = ExtResource("3_l6jd7")
+expand_mode = 1
+
+[node name="Events Deck" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 355.0
+offset_right = 100.0
+offset_bottom = 488.0
+texture = ExtResource("4_0rfpp")
+expand_mode = 1
+
+[connection signal="pressed" from="Sacrifice Button" to="Player Hand" method="_on_sacrifice_button_pressed"]
+[connection signal="pressed" from="Action Button" to="Player Hand" method="_on_action_button_pressed"]

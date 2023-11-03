@@ -9,6 +9,17 @@ func _init(cards:Array):
 func get_card(index:int):
 	return deck[index]
 	
+func set_card(index:int, card:Card):
+	deck.insert(index,card)
+	
+func add_card(card:Card):
+	deck.append(card)
+	return deck
+	
+func remove_card(index:int):
+	deck.remove_at(index)
+	return deck
+	
 func shuffle():
 	randomize()
 	deck.shuffle()
@@ -16,6 +27,5 @@ func shuffle():
 func _to_string():
 	var returnValue:String = ""
 	for card in deck:
-		print_debug(card._to_string())
 		returnValue += card._to_string()
 	return returnValue
