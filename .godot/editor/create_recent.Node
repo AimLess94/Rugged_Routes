@@ -1,8 +1,9 @@
+TextureRect
+Button
+TextureButton
 CanvasLayer
 Camera2D
-TextureButton
 HBoxContainer
-Button
 ParallaxLayer
 ParallaxBackground
 Sprite2D

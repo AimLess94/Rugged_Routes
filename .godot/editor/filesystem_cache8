@@ -1,21 +1,24 @@
 2a60927148abd1d33b818b535e306557
-::res://::1698971026
+::res://::1699020503
 Board.gd::GDScript::-1::1698950549::0::1::::<>Node2D<>::
-Board.tscn::PackedScene::8406230543759209536::1698971026::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67<>uid://d37sifvl71gd5<>uid://buons7dyfdoh5
+Board.tscn::PackedScene::8406230543759209536::1699019549::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67<>uid://d37sifvl71gd5<>uid://buons7dyfdoh5
 Card.gd::GDScript::-1::1698946198::0::1::::Card<>Node2D<>::
-CardAndDeckInterface.gd::GDScript::-1::1698969867::0::1::::<>HBoxContainer<>::
-CardAndDeckInterface.tscn::PackedScene::3819921996685721836::1698971026::0::1::::<><>::res://CardAndDeckInterface.gd
-Deck.gd::GDScript::-1::1698948547::0::1::::Deck<>Node<>::
-Decks.gd::GDScript::-1::1698945896::0::1::::Decks<>Node<>::
+CardAndDeckInterface.gd::GDScript::-1::1699019170::0::1::::<>HBoxContainer<>::
+CardAndDeckInterface.tscn::PackedScene::3819921996685721836::1699019172::0::1::::<><>::res://CardAndDeckInterface.gd
+Deck.gd::GDScript::-1::1699019126::0::1::::Deck<>Node<>::
+Decks.gd::GDScript::-1::1699019549::0::1::::Decks<>Node<>::
+Hand.gd::GDScript::-1::1699018928::0::1::::Hand<>Node<>::
 icon.svg::CompressedTexture2D::3833855046394519279::1698890311::1698890316::1::::<><>::
 MovementCards.gd::GDScript::-1::1698944459::0::1::::MovementCards<>Node<>::
 player.gd::GDScript::-1::1698891552::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8897988629244706298::1698971026::0::1::::<><>::res://player.gd<>uid://boskfe13au8lr
+player.tscn::PackedScene::8897988629244706298::1699019172::0::1::::<><>::res://player.gd<>uid://boskfe13au8lr
 stone mountain.PNG::CompressedTexture2D::7288417619562713170::1698924752::1698924752::1::::<><>::
-::res://assets/::1698970978
+::res://assets/::1699020503
+campfire.png::CompressedTexture2D::4899597511542822044::1699020279::1699020282::1::::<><>::
 HikerTemp.png::CompressedTexture2D::3406839644627151403::1698971189::1698971195::1::::<><>::
 MountFuji.jpg::CompressedTexture2D::9191717248896383116::1698970232::1698970241::1::::<><>::
-::res://assets/Cards/::1698937333
+::res://assets/Cards/::1699020503
+card back black.png::CompressedTexture2D::6107033946789943489::1699020500::1699020503::1::::<><>::
 card back red.png::CompressedTexture2D::7573022347888378171::1698937161::1698937203::1::::<><>::
 ::res://assets/Cards/Movement/::1698937416
 1.png::CompressedTexture2D::5464322959211297295::1698937331::1698937392::1::::<><>::
