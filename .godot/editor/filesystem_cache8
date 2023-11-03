@@ -1,13 +1,20 @@
 2a60927148abd1d33b818b535e306557
-::res://::1698937416
-Board.gd::GDScript::-1::1698927622::0::1::::<>Node2D<>::
-Board.tscn::PackedScene::8406230543759209536::1698937047::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67<>uid://db3tf5nctkarq
-Card.gd::GDScript::-1::1698937047::0::1::::Card<>Node2D<>::
+::res://::1698971026
+Board.gd::GDScript::-1::1698950549::0::1::::<>Node2D<>::
+Board.tscn::PackedScene::8406230543759209536::1698971026::0::1::::<><>::res://Board.gd<>uid://dy1itqb3wtb67<>uid://d37sifvl71gd5<>uid://buons7dyfdoh5
+Card.gd::GDScript::-1::1698946198::0::1::::Card<>Node2D<>::
+CardAndDeckInterface.gd::GDScript::-1::1698969867::0::1::::<>HBoxContainer<>::
+CardAndDeckInterface.tscn::PackedScene::3819921996685721836::1698971026::0::1::::<><>::res://CardAndDeckInterface.gd
+Deck.gd::GDScript::-1::1698948547::0::1::::Deck<>Node<>::
+Decks.gd::GDScript::-1::1698945896::0::1::::Decks<>Node<>::
 icon.svg::CompressedTexture2D::3833855046394519279::1698890311::1698890316::1::::<><>::
+MovementCards.gd::GDScript::-1::1698944459::0::1::::MovementCards<>Node<>::
 player.gd::GDScript::-1::1698891552::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8897988629244706298::1698927623::0::1::::<><>::res://player.gd<>uid://buvfbdsvm2ga6
+player.tscn::PackedScene::8897988629244706298::1698971026::0::1::::<><>::res://player.gd<>uid://boskfe13au8lr
 stone mountain.PNG::CompressedTexture2D::7288417619562713170::1698924752::1698924752::1::::<><>::
-::res://assets/::1698937184
+::res://assets/::1698970978
+HikerTemp.png::CompressedTexture2D::3406839644627151403::1698971189::1698971195::1::::<><>::
+MountFuji.jpg::CompressedTexture2D::9191717248896383116::1698970232::1698970241::1::::<><>::
 ::res://assets/Cards/::1698937333
 card back red.png::CompressedTexture2D::7573022347888378171::1698937161::1698937203::1::::<><>::
 ::res://assets/Cards/Movement/::1698937416

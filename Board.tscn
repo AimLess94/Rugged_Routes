@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://Board.gd" id="1_rwry1"]
 [ext_resource type="PackedScene" uid="uid://dy1itqb3wtb67" path="res://player.tscn" id="2_cj3fg"]
-[ext_resource type="Texture2D" uid="uid://db3tf5nctkarq" path="res://stone mountain.PNG" id="2_hs1r5"]
+[ext_resource type="Texture2D" uid="uid://d37sifvl71gd5" path="res://assets/MountFuji.jpg" id="2_l48tx"]
 [ext_resource type="PackedScene" uid="uid://buons7dyfdoh5" path="res://CardAndDeckInterface.tscn" id="4_ski7r"]
 
 [sub_resource type="Curve2D" id="Curve2D_i4ki0"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -35, 45, 0, 0, 0, 0, -1, 58, 0, 0, 0, 0, 34, 67, 0, 0, 0, 0, 66, 76, 0, 0, 0, 0, 96, 86, 0, 0, 0, 0, 122, 92, 0, 0, 0, 0, 145, 90, 0, 0, 0, 0, 181, 104, 0, 0, 0, 0, 216, 113, 0, 0, 0, 0, 251, 127, 0, 0, 0, 0, 292, 142, 0, 0, 0, 0, 331, 169, 0, 0, 0, 0, 361, 191, 0, 0, 0, 0, 397, 206, 0, 0, 0, 0, 436, 212, 0, 0, 0, 0, 468, 220, 0, 0, 0, 0, 486, 252, 0, 0, 0, 0, 503, 276, 0, 0, 0, 0, 521, 288, 0, 0, 0, 0, 548, 284, 0, 0, 0, 0, 580, 282, 0, 0, 0, 0, 599, 278, 0, 0, 0, 0, 624, 299, 0, 0, 0, 0, 639, 319, 0, 0, 0, 0, 654, 339, 0, 0, 0, 0, 701, 360)
+"points": PackedVector2Array(0, 0, 0, 0, 589, 533, 0, 0, 0, 0, 601, 523, 0, 0, 0, 0, 574, 515, 0, 0, 0, 0, 539, 505, 0, 0, 0, 0, 509, 508, 0, 0, 0, 0, 481, 507, 0, 0, 0, 0, 468, 495, 0, 0, 0, 0, 426, 488, 0, 0, 0, 0, 379, 478, 0, 0, 0, 0, 330, 469, 0, 0, 0, 0, 284, 460, 0, 0, 0, 0, 319, 441, 0, 0, 0, 0, 237, 443, 0, 0, 0, 0, 284, 404, 0, 0, 0, 0, 250, 401, 0, 0, 0, 0, 268, 387, 0, 0, 0, 0, 227, 383, 0, 0, 0, 0, 236, 370, 0, 0, 0, 0, 211, 368, 0, 0, 0, 0, 214, 355, 0, 0, 0, 0, 212, 340, 0, 0, 0, 0, 245, 317, 0, 0, 0, 0, 275, 297, 0, 0, 0, 0, 275, 283, 0, 0, 0, 0, 293, 266, 0, 0, 0, 0, 277, 249, 0, 0, 0, 0, 291, 235, 0, 0, 0, 0, 332, 215, 0, 0, 0, 0, 370, 195, 0, 0, 0, 0, 425, 167, 0, 0, 0, 0, 413, 156, 0, 0, 0, 0, 389, 139, 0, 0, 0, 0, 354, 126, 0, 0, 0, 0, 424, 125, 0, 0, 0, 0, 492, 126, 0, 0, 0, 0, 542, 116, 0, 0, 0, 0, 591, 105, 0, 0, 0, 0, 627, 83, 0, 0, 0, 0, 610, 61, 0, 0, 0, 0, 557, 62, 0, 0, 0, 0, 542, 34, 0, 0, 0, 0, 510, 6)
 }
-point_count = 26
+point_count = 42
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_rwry1")
@@ -18,21 +18,25 @@ script = ExtResource("1_rwry1")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="StoneMountain" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(574.5, 324.5)
-scale = Vector2(0.719178, 0.827366)
-texture = ExtResource("2_hs1r5")
+[node name="MountFuji" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576.307, 323.25)
+scale = Vector2(0.684889, 0.572)
+texture = ExtResource("2_l48tx")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(56, 48)
 curve = SubResource("Curve2D_i4ki0")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-35, 45)
-rotation = 0.365201
+position = Vector2(589, 533)
+rotation = -0.694738
 
 [node name="Player" parent="Path2D/PathFollow2D" instance=ExtResource("2_cj3fg")]
-position = Vector2(0, 0)
+position = Vector2(2, 5)
+rotation = 0.698132
+
+[node name="Camera2D2" type="Camera2D" parent="Path2D/PathFollow2D/Player"]
+zoom = Vector2(10, 10)
 
 [node name="move button" type="Button" parent="."]
 visible = false
@@ -82,7 +86,9 @@ offset_right = 832.0
 offset_bottom = 632.0
 text = "6"
 
-[node name="HBoxContainer" parent="." instance=ExtResource("4_ski7r")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("4_ski7r")]
 offset_left = 154.0
 offset_top = 455.0
 offset_right = 3642.0
