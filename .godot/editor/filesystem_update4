@@ -5,3 +5,6 @@ res://CardAndDeckInterface.gd
 res://player.tscn
 res://CardAndDeckInterface.tscn
 res://Decks.gd
+res://Card.gd
+res://MovementCards.gd
+res://ToolCards.gd

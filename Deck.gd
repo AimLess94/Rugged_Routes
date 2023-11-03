@@ -10,8 +10,11 @@ func get_card(index:int):
 	return deck[index]
 	
 func set_card(index:int, card:Card):
-	#deck[index] = card
 	deck.insert(index,card)
+	
+func add_card(card:Card):
+	deck.append(card)
+	return deck
 	
 func remove_card(index:int):
 	deck.remove_at(index)
