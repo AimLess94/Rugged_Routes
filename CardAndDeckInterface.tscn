@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://buons7dyfdoh5"]
+[gd_scene load_steps=6 format=3 uid="uid://buons7dyfdoh5"]
 
 [ext_resource type="Script" path="res://CardAndDeckInterface.gd" id="1_c2ob1"]
 [ext_resource type="Texture2D" uid="uid://cb2nwjm8445j1" path="res://assets/campfire.png" id="2_aduxo"]
 [ext_resource type="Texture2D" uid="uid://df5oto2vrsfe6" path="res://assets/Cards/card back red.png" id="3_l6jd7"]
+[ext_resource type="Texture2D" uid="uid://wkjqr05fbrvd" path="res://assets/campfire disabled.png" id="3_y511u"]
 [ext_resource type="Texture2D" uid="uid://ctaj7sehr0cll" path="res://assets/Cards/card back black.png" id="4_0rfpp"]
 
 [node name="Card & Deck UI" type="CanvasLayer"]
@@ -26,6 +27,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 texture_normal = ExtResource("2_aduxo")
+texture_disabled = ExtResource("3_y511u")
 ignore_texture_size = true
 stretch_mode = 4
 
