@@ -1,6 +1,6 @@
 extends Node2D
 
-var i : int = 0
+var playerPosition : int = 1
 var boardPositionsCount:int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,33 +10,28 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	pass
-
-
-func _on_move_button_pressed():
-	var deck:Deck = Decks.new().moveAndToolsDeck
-	deck.shuffle()
-	print_debug(deck._to_string())
-	move_player()
 	
 
-func move_player():
-	
-	if i < boardPositionsCount:
-		$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(i)
+func move_player(movementNumber:int):
+	var playerPreviousPosition:int = playerPosition
+	playerPosition=playerPosition+movementNumber
+	if playerPosition < boardPositionsCount:
+		await movePlayerVisualEachPoint(playerPreviousPosition,playerPosition)
+		#$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(playerPosition)
 		
 	else:
 		#you win
-		print_debug(boardPositionsCount)
-		i = boardPositionsCount-1
-		print_debug(i)
-		print_debug($Path2D.curve.get_point_position(i))
-		$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(i)
+		playerPosition = boardPositionsCount
+		await movePlayerVisualEachPoint(playerPreviousPosition,playerPosition)
+		#$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(playerPosition)
 		print_debug("YOU WIN")
 		pass
 	
-
+func movePlayerVisualEachPoint(startPosition:int,endPosition:int):
+	for position in range(startPosition,endPosition):
+		$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(position)
+		await get_tree().create_timer(.5).timeout
 
 func _on_card_pressed(movementNumber:int):
-	i=i+movementNumber
-	print_debug(i)
-	move_player()
+	
+	await move_player(movementNumber)

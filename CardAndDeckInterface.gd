@@ -12,7 +12,8 @@ func _ready():
 	deck = retunedHandAndDeck["DECK"]
 	hand = retunedHandAndDeck["HAND"]
 	buildHandUi(hand)
-		
+	$"../Action Button".disabled = true
+	$"../Sacrifice Button".disabled = true
 
 func buildHandUi(hand:Deck):
 	for card in hand.deck: 
@@ -43,6 +44,8 @@ func _process(delta):
 	pass
 
 func cardPressed(card:Card,cardNode:Node):
+	$"../Action Button".disabled = false
+	$"../Sacrifice Button".disabled = false
 	if selectedCardNode != null:
 		selectedCardNode.button_pressed = false
 	selectedCardNode = cardNode
@@ -52,26 +55,34 @@ func cardPressed(card:Card,cardNode:Node):
 
 
 func _on_action_button_pressed():
-	if $"../Action Button".text == "Play Card":
-		
+	if $"../Action Button".text == "Play Card" and selectedCard != null:
+		$"../Action Button".disabled = true
+		$"../Sacrifice Button".disabled = true
 		if selectedCard.Effects.has("MOVE"):
 			#Move Player
-			$"../.."._on_card_pressed(selectedCard.Effects["MOVE"]) 
+			await $"../.."._on_card_pressed(selectedCard.Effects["MOVE"]) 
 		if selectedCard.Effects.has("DRAW"):
 			for n in selectedCard.Effects["DRAW"]:
 				drawCard(hand,deck)
 		handelCardBeingUsed()
+		$"../Action Button".disabled = false
+		
 		
 	elif $"../Action Button".text == "End Turn":
+		$"../Action Button".disabled = true
+		
 		while hand.deck.size()< Hand.new().minHandSize:
 			drawCard(hand,deck)
 		redrawHand(hand)
 		$"../Action Button".text = "Play Card"
 		selectedCardNode = null
 		selectedCard = null
+		$"../Action Button".disabled = true
+		$"../Sacrifice Button".disabled = true
 
 
 func _on_sacrifice_button_pressed():
+	$"../Sacrifice Button".disabled = true
 	handelCardBeingUsed()
 	
 func handelCardBeingUsed():
