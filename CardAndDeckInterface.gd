@@ -45,7 +45,8 @@ func _process(delta):
 
 func cardPressed(card:Card,cardNode:Node):
 	$"../Action Button".disabled = false
-	$"../Sacrifice Button".disabled = false
+	if $"../Action Button".text != "End Turn": #Works for disabling sacrifice without event cards being played may need to reevaluate then
+		$"../Sacrifice Button".disabled = false
 	if selectedCardNode != null:
 		selectedCardNode.button_pressed = false
 	selectedCardNode = cardNode
