@@ -54,5 +54,12 @@ offset_bottom = 488.0
 texture = ExtResource("4_0rfpp")
 expand_mode = 1
 
+[node name="EventCardVisual" type="TextureRect" parent="."]
+offset_left = 469.0
+offset_top = 98.0
+offset_right = 638.0
+offset_bottom = 362.0
+expand_mode = 3
+
 [connection signal="pressed" from="Sacrifice Button" to="Player Hand" method="_on_sacrifice_button_pressed"]
 [connection signal="pressed" from="Action Button" to="Player Hand" method="_on_action_button_pressed"]
