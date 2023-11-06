@@ -36,6 +36,7 @@ position = Vector2(2, 5)
 rotation = 0.698132
 
 [node name="Camera2D2" type="Camera2D" parent="Path2D/PathFollow2D/Player"]
+visible = false
 zoom = Vector2(10, 10)
 
 [node name="Card & Deck UI" parent="." instance=ExtResource("4_ski7r")]

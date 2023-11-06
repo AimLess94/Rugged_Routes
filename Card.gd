@@ -6,12 +6,12 @@ var imageTexture:ImageTexture = ImageTexture.new()
 var CardName:String
 var CardType:String
 var Effects:Dictionary
-var Counters:Dictionary
+var Counters:Array
 var FrontImageNormal:ImageTexture
 var FrontImagePressed:ImageTexture
 var BackImage:ImageTexture
 
-func _init(cardName:String, cardType:String, effects:Dictionary,frontImgsFolderPath:String, backImgPath:String, counters:Dictionary = {}):
+func _init(cardName:String, cardType:String, effects:Dictionary,frontImgsFolderPath:String, backImgPath:String, counters:Array = []):
 	CardName = cardName
 	CardType = cardType
 	Effects = effects

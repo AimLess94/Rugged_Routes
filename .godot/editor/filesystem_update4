@@ -1,11 +1,5 @@
-res://Board.tscn
-res://Deck.gd
-res://Hand.gd
-res://CardAndDeckInterface.gd
 res://player.tscn
+res://Board.tscn
 res://CardAndDeckInterface.tscn
-res://Decks.gd
-res://Card.gd
-res://MovementCards.gd
-res://ToolCards.gd
-res://Board.gd
+res://CardAndDeckInterface.gd
+res://Hand.gd
