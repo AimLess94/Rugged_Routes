@@ -3,3 +3,8 @@ res://Board.tscn
 res://CardAndDeckInterface.tscn
 res://CardAndDeckInterface.gd
 res://Hand.gd
+res://GameComplete.gd
+res://MainMenu.gd
+res://MainMenu.tscn
+res://GameComplete.tscn
+res://Board.gd

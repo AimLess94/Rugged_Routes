@@ -1,5 +1,6 @@
-TextureRect
 Button
+Label
+TextureRect
 TextureButton
 CanvasLayer
 Camera2D
