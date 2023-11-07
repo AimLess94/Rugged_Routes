@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db3tf5nctkarq"
-path="res://.godot/imported/stone mountain.PNG-1dad8accf2467a364fcc3c505171d116.ctex"
+uid="uid://bwq8uddot6rdj"
+path="res://.godot/imported/Pressed.png-a88630f572711d161b8ac3b43c5e7014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stone mountain.PNG"
-dest_files=["res://.godot/imported/stone mountain.PNG-1dad8accf2467a364fcc3c505171d116.ctex"]
+source_file="res://assets/Cards/Collectables/BERRIES/Pressed.png"
+dest_files=["res://.godot/imported/Pressed.png-a88630f572711d161b8ac3b43c5e7014.ctex"]
 
 [params]
 

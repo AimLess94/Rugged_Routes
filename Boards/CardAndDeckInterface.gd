@@ -53,8 +53,11 @@ func _process(delta):
 	pass
 
 func cardPressed(card:Card,cardNode:Node):
-	$"../Action Button".disabled = false
-	if $"../Action Button".text == "End Turn" or $"../Action Button".text == "Play Counter": #Works for disabling sacrifice without event cards being played may need to reevaluate then
+	if card.CardType == "Movement" or card.CardType == "Tool":
+		$"../Action Button".disabled = false
+	else:
+		$"../Action Button".disabled = true
+	if $"../Action Button".text == "End Turn" or $"../Action Button".text == "Play Counter": 
 		$"../Sacrifice Button".disabled = true
 	else:
 		$"../Sacrifice Button".disabled = false
@@ -92,7 +95,7 @@ func executeCounterCardPlayed():
 	discardCardFromHand()
 	disableCardsInHand()
 	$"../EventCardVisual".texture = null
-	print_debug("COUNTER TO BE PLAYED")
+
 	$"../Action Button".text = "End Turn" 
 	$"../Action Button".disabled = false
 
@@ -111,6 +114,7 @@ func executeEndTurn():
 func _on_sacrifice_button_pressed():
 	$"../Sacrifice Button".disabled = true
 	handelCardBeingUsed()
+	$"../Action Button".disabled = false
 	
 func handelCardBeingUsed():
 	discardCardFromHand()
@@ -118,9 +122,10 @@ func handelCardBeingUsed():
 
 func discardCardFromHand():
 	#Add Card To Discard
-	discard.deck = discard.add_card(selectedCard)
+	#discard.deck = discard.add_card(selectedCard)
 	#Remove Card From Hand
-	hand.remove_card(hand.deck.find(selectedCard))
+	#hand.remove_card(hand.deck.find(selectedCard))
+	discardCardToCorrectDiscardDeck(selectedCard)
 	redrawHand(hand)
 
 func redrawHand(hand:Deck):
@@ -138,14 +143,14 @@ func drawEventCard():
 	handleEmptyEventDeck()
 	var drawnEventCard:Card = eventsDeck.get_card(0)
 	eventsDeck.deck = eventsDeck.remove_card(0)
+	$"../EventCardVisual".texture = drawnEventCard.FrontImageNormal
 	if drawnEventCard.CardType == "Event":
 		handleEventCardDraw(drawnEventCard)
 	if drawnEventCard.CardType == "Collectable":
-		pass #impliment when collectable cards are implimented
+		hand.deck = hand.add_card(drawnEventCard)
+		$"../Action Button".text = "End Turn"
 
 func handleEventCardDraw(drawnEventCard:Card):
-	$"../EventCardVisual".texture = drawnEventCard.FrontImageNormal
-	print_debug(drawnEventCard.Counters)
 	if isCounterCardInHand(drawnEventCard.Counters):
 		disableCardsNotAbleToCounterEventCard(drawnEventCard)
 		$"../Action Button".disabled = false
@@ -185,16 +190,20 @@ func handleEventCardEffects(drawnEventCard:Card):
 		if cardsToDiscard>hand.deck.size():
 			cardsToDiscard = hand.deck.size()
 		for n in drawnEventCard.Effects["DISCARD"]:
-			var cardToDiscard:Card = hand.deck[randi() % hand.deck.size()]
+			#var cardToDiscard:Card = hand.deck[randi() % hand.deck.size()]
+			discardCardToCorrectDiscardDeck(hand.deck[randi() % hand.deck.size()])
 			
-			discard.deck = discard.add_card(cardToDiscard)
-			#Remove Card From Hand
-			hand.remove_card(hand.deck.find(cardToDiscard))
 		redrawHand(hand)
 	if drawnEventCard.Effects.has("LOSETURN"):
 		#to be implimented when multiple players implimented
 		pass
-
+func discardCardToCorrectDiscardDeck(cardToDiscard:Card):
+	if cardToDiscard.CardType == "Movement" or cardToDiscard.CardType == "Tool":
+		discard.deck = discard.add_card(cardToDiscard)
+		#Remove Card From Hand
+	elif cardToDiscard.CardType == "Event" or cardToDiscard.CardType == "Collectable":
+		eventsDiscard.deck = eventsDiscard.add_card(cardToDiscard)
+	hand.remove_card(hand.deck.find(cardToDiscard))
 func handleEmptyDrawDeck():
 	if deck.deck.size() == 0:
 		deck.deck = discard.deck.duplicate(true)

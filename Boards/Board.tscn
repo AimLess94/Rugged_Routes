@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr1bnhs61268k"]
+[gd_scene load_steps=6 format=3 uid="uid://crv8gwf20xufe"]
 
-[ext_resource type="Script" path="res://Board.gd" id="1_rwry1"]
-[ext_resource type="PackedScene" uid="uid://dy1itqb3wtb67" path="res://player.tscn" id="2_cj3fg"]
-[ext_resource type="Texture2D" uid="uid://d37sifvl71gd5" path="res://assets/MountFuji.jpg" id="2_l48tx"]
-[ext_resource type="PackedScene" uid="uid://buons7dyfdoh5" path="res://CardAndDeckInterface.tscn" id="4_ski7r"]
+[ext_resource type="Script" path="res://Boards/Board.gd" id="1_fhmg4"]
+[ext_resource type="Texture2D" uid="uid://d37sifvl71gd5" path="res://assets/MountFuji.jpg" id="2_jv2fa"]
+[ext_resource type="PackedScene" uid="uid://dy1itqb3wtb67" path="res://player.tscn" id="3_34ycm"]
+[ext_resource type="PackedScene" uid="uid://buons7dyfdoh5" path="res://Boards/CardAndDeckInterface.tscn" id="4_qw0o4"]
 
 [sub_resource type="Curve2D" id="Curve2D_i4ki0"]
 _data = {
@@ -12,7 +12,7 @@ _data = {
 point_count = 42
 
 [node name="Board" type="Node2D"]
-script = ExtResource("1_rwry1")
+script = ExtResource("1_fhmg4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -21,7 +21,7 @@ script = ExtResource("1_rwry1")
 [node name="MountFuji" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(576.307, 323.25)
 scale = Vector2(0.684889, 0.572)
-texture = ExtResource("2_l48tx")
+texture = ExtResource("2_jv2fa")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(56, 48)
@@ -31,12 +31,11 @@ curve = SubResource("Curve2D_i4ki0")
 position = Vector2(589, 533)
 rotation = -0.694738
 
-[node name="Player" parent="Path2D/PathFollow2D" instance=ExtResource("2_cj3fg")]
+[node name="Player" parent="Path2D/PathFollow2D" instance=ExtResource("3_34ycm")]
 position = Vector2(2, 5)
 rotation = 0.698132
 
 [node name="Camera2D2" type="Camera2D" parent="Path2D/PathFollow2D/Player"]
-visible = false
 zoom = Vector2(10, 10)
 
-[node name="Card & Deck UI" parent="." instance=ExtResource("4_ski7r")]
+[node name="Card & Deck UI" parent="." instance=ExtResource("4_qw0o4")]
