@@ -29,7 +29,7 @@ func move_player(movementNumber:int):
 		playerPosition = boardPositionsCount
 		await movePlayerVisualEachPoint(playerPreviousPosition,playerPosition)
 		#$Path2D/PathFollow2D.position = $Path2D.curve.get_point_position(playerPosition)
-		print_debug("YOU WIN")
+		get_tree().change_scene_to_file("res://GameComplete.tscn")
 		pass
 	
 func movePlayerVisualEachPoint(startPosition:int,endPosition:int):

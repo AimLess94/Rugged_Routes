@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4lu8kjrx3oub"]
+
+[ext_resource type="Script" path="res://GameComplete.gd" id="1_ani5b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_goj02"]
+font_size = 38
+
+[node name="GameComplete" type="Node2D"]
+script = ExtResource("1_ani5b")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 54.0
+offset_right = 862.0
+offset_bottom = 122.0
+text = "You Win or Lose Or Something IDK"
+label_settings = SubResource("LabelSettings_goj02")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 297.0
+offset_top = 368.0
+offset_right = 794.0
+offset_bottom = 424.0
+text = "Return To Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
