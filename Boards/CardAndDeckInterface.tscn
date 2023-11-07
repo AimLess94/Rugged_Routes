@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://buons7dyfdoh5"]
 
-[ext_resource type="Script" path="res://CardAndDeckInterface.gd" id="1_c2ob1"]
-[ext_resource type="Texture2D" uid="uid://cb2nwjm8445j1" path="res://assets/campfire.png" id="2_aduxo"]
-[ext_resource type="Texture2D" uid="uid://df5oto2vrsfe6" path="res://assets/Cards/card back red.png" id="3_l6jd7"]
-[ext_resource type="Texture2D" uid="uid://wkjqr05fbrvd" path="res://assets/campfire disabled.png" id="3_y511u"]
-[ext_resource type="Texture2D" uid="uid://ctaj7sehr0cll" path="res://assets/Cards/card back black.png" id="4_0rfpp"]
+[ext_resource type="Script" path="res://Boards/CardAndDeckInterface.gd" id="1_joqys"]
+[ext_resource type="Texture2D" uid="uid://cb2nwjm8445j1" path="res://assets/campfire.png" id="2_qyibg"]
+[ext_resource type="Texture2D" uid="uid://wkjqr05fbrvd" path="res://assets/campfire disabled.png" id="3_ao8ll"]
+[ext_resource type="Texture2D" uid="uid://df5oto2vrsfe6" path="res://assets/Cards/card back red.png" id="4_07rbh"]
+[ext_resource type="Texture2D" uid="uid://ctaj7sehr0cll" path="res://assets/Cards/card back black.png" id="5_c8pmk"]
 
 [node name="Card & Deck UI" type="CanvasLayer"]
 
@@ -16,7 +16,7 @@ offset_right = 3542.0
 offset_bottom = 1095.0
 scale = Vector2(0.25, 0.25)
 theme_override_constants/separation = 4
-script = ExtResource("1_c2ob1")
+script = ExtResource("1_joqys")
 
 [node name="Sacrifice Button" type="TextureButton" parent="."]
 offset_left = 1017.0
@@ -26,8 +26,8 @@ offset_bottom = 622.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
-texture_normal = ExtResource("2_aduxo")
-texture_disabled = ExtResource("3_y511u")
+texture_normal = ExtResource("2_qyibg")
+texture_disabled = ExtResource("3_ao8ll")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -43,7 +43,7 @@ offset_left = 15.0
 offset_top = 497.0
 offset_right = 99.0
 offset_bottom = 630.0
-texture = ExtResource("3_l6jd7")
+texture = ExtResource("4_07rbh")
 expand_mode = 1
 
 [node name="Events Deck" type="TextureRect" parent="."]
@@ -51,7 +51,7 @@ offset_left = 16.0
 offset_top = 355.0
 offset_right = 100.0
 offset_bottom = 488.0
-texture = ExtResource("4_0rfpp")
+texture = ExtResource("5_c8pmk")
 expand_mode = 1
 
 [node name="EventCardVisual" type="TextureRect" parent="."]
