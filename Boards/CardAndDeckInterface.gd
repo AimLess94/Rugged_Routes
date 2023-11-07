@@ -111,6 +111,7 @@ func executeEndTurn():
 func _on_sacrifice_button_pressed():
 	$"../Sacrifice Button".disabled = true
 	handelCardBeingUsed()
+	$"../Action Button".disabled = false
 	
 func handelCardBeingUsed():
 	discardCardFromHand()

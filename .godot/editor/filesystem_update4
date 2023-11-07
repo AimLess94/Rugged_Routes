@@ -4,3 +4,4 @@ res://GameComplete.tscn
 res://MainMenu.tscn
 res://MainMenu.gd
 res://Boards/Board.tscn
+res://Boards/CardAndDeckInterface.gd
