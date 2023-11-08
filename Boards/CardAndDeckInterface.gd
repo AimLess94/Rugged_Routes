@@ -1,9 +1,10 @@
 extends HBoxContainer
 
-var deck:Deck = Decks.new().moveAndToolsDeck
-var discard:Deck = Decks.new().discard
-var eventsDeck:Deck = Decks.new().events
-var eventsDiscard:Deck = Decks.new().eventsDiscard
+@onready var board:Node = $"../.."
+@onready var deck:Deck = board.deck
+@onready var discard:Deck = board.discard
+@onready var eventsDeck:Deck = board.eventsDeck
+@onready var eventsDiscard:Deck = board.eventsDiscard
 
 var hand:Deck
 
