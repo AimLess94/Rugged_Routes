@@ -32,6 +32,7 @@ position = Vector2(589, 533)
 rotation = -0.694738
 
 [node name="Player" parent="Path2D/PathFollow2D" instance=ExtResource("3_34ycm")]
+visible = false
 position = Vector2(2, 5)
 rotation = 0.698132
 

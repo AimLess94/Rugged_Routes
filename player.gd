@@ -3,6 +3,7 @@ class_name Player
 
 var hand:Hand
 var playerPosition:int = 0
+var points:int = 0
 
 func _init(hand:Hand):
 	hand = hand
