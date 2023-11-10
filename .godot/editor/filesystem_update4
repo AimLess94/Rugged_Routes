@@ -1,8 +1,9 @@
-res://player.tscn
-res://player.gd
-res://Boards/Board.gd
 res://Boards/Board.tscn
+res://Boards/Board.gd
+res://Boards/CardAndDeckInterface.gd
+res://player.tscn
 res://Boards/CardAndDeckInterface.tscn
 res://GameComplete.tscn
 res://MainMenu.tscn
-res://Boards/CardAndDeckInterface.gd
+res://Cards/Util/Hand.gd
+res://player.gd

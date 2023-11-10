@@ -4,6 +4,9 @@ class_name Hand
 var hand:Deck=Deck.new([])
 var minHandSize:int = 7
 
+func _init(handDeck:Deck):
+	hand = handDeck
+	
 func drawHand(handSize:int,deck:Deck):
 	if handSize == 0:
 		handSize = minHandSize
