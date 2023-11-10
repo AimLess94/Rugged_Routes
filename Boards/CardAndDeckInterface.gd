@@ -1,4 +1,5 @@
 extends HBoxContainer
+class_name HandUi
 
 @onready var board:Node = $"../.."
 @onready var deck:Deck = board.deck
@@ -14,7 +15,7 @@ var selectedCardNode:Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	var retunedHandAndDeck:Dictionary = Hand.new().drawHand(0, deck)
+	var retunedHandAndDeck:Dictionary = Hand.new(Deck.new([])).drawHand(0, deck)
 	deck = retunedHandAndDeck["DECK"]
 	hand = retunedHandAndDeck["HAND"]
 	buildHandUi(hand)
@@ -103,7 +104,7 @@ func executeCounterCardPlayed():
 func executeEndTurn():
 	$"../Action Button".disabled = true
 	$"../EventCardVisual".texture = null
-	while hand.deck.size()< Hand.new().minHandSize:
+	while hand.deck.size()< Hand.new(Deck.new([])).minHandSize:
 		drawCard(hand,deck)
 	redrawHand(hand)
 	$"../Action Button".text = "Play Card"

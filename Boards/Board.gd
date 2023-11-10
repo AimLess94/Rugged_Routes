@@ -10,20 +10,24 @@ var boardPositionsCount:int = 0
 @onready var path = $Path2D
 @onready var pathFollow = $Path2D/PathFollow2D
 
-@onready var player:PackedScene = load("res://player.tscn")
-@onready var currentPlayer
+@onready var player:Node = Player.new(Hand.new(Deck.new([])))
+@onready var playerInstantiation
+@onready var currentPlayer:Player
+@onready var handUi:HandUi = HandUi.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	boardPositionsCount =$Path2D.curve.point_count
-	#print_debug($Player.position)
-	print_debug(path.curve.get_point_position(0))
-	currentPlayer  = player.instantiate()
-	self.add_child(currentPlayer)
+	player.set_name("Player_1")
+	self.add_child(player)
+	
+	currentPlayer = player 
 	currentPlayer.global_position = path.curve.get_point_position(0) + path.global_position
-	#playerNode.Player.points
-	#var pathDup = path.duplicate()
-	#self.add_child(pathDup)
-	#pathFollow.add_child(player.instantiate())
+	var retunedHandAndDeck:Dictionary = Hand.new(Deck.new([])).drawHand(0, deck)
+	deck = retunedHandAndDeck["DECK"]
+	currentPlayer.hand = Hand.new(retunedHandAndDeck["HAND"])
+	handUi.buildHandUi(currentPlayer.hand.hand)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

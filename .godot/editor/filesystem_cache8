@@ -1,13 +1,13 @@
 2a60927148abd1d33b818b535e306557
-::res://::1699449329
+::res://::1699619118
 export_presets.cfg::TextFile::-1::1699320387::0::1::::<><>::
 GameComplete.gd::GDScript::-1::1699318545::0::1::::<>Node2D<>::
-GameComplete.tscn::PackedScene::6832299799178986129::1699394828::0::1::::<><>::res://GameComplete.gd
+GameComplete.tscn::PackedScene::6832299799178986129::1699470077::0::1::::<><>::res://GameComplete.gd
 icon.svg::CompressedTexture2D::3833855046394519279::1698886711::1698886716::1::::<><>::
 MainMenu.gd::GDScript::-1::1699369752::0::1::::<>Node2D<>::
-MainMenu.tscn::PackedScene::2158524535933797333::1699394828::0::1::::<><>::res://MainMenu.gd
-player.gd::GDScript::-1::1699278028::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::8897988629244706298::1699394828::0::1::::<><>::res://player.gd<>uid://boskfe13au8lr
+MainMenu.tscn::PackedScene::2158524535933797333::1699470077::0::1::::<><>::res://MainMenu.gd
+player.gd::GDScript::-1::1699449364::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::8897988629244706298::1699470077::0::1::::<><>::res://player.gd<>uid://boskfe13au8lr
 ::res://assets/::1699051524
 campfire disabled.png::CompressedTexture2D::1565374296101553641::1699051508::1699051524::1::::<><>::
 campfire.png::CompressedTexture2D::4899597511542822044::1699016679::1699016682::1::::<><>::
@@ -86,11 +86,11 @@ Pressed.png::CompressedTexture2D::7983225020572913145::1699038145::1699038297::1
 ::res://assets/Cards/Tools/WATER/::1699038297
 Normal.png::CompressedTexture2D::8461540050733825164::1699037418::1699038297::1::::<><>::
 Pressed.png::CompressedTexture2D::4365628657408405003::1699037477::1699038297::1::::<><>::
-::res://Boards/::1699395062
-Board.gd::GDScript::-1::1699318545::0::1::::<>Node2D<>::
-Board.tscn::PackedScene::6011419182091548006::1699395062::0::1::::<><>::res://Boards/Board.gd<>uid://d37sifvl71gd5<>uid://dy1itqb3wtb67<>uid://buons7dyfdoh5
-CardAndDeckInterface.gd::GDScript::-1::1699395051::0::1::::<>HBoxContainer<>::
-CardAndDeckInterface.tscn::PackedScene::3819921996685721836::1699394828::0::1::::<><>::res://Boards/CardAndDeckInterface.gd<>uid://cb2nwjm8445j1<>uid://wkjqr05fbrvd<>uid://df5oto2vrsfe6<>uid://ctaj7sehr0cll
+::res://Boards/::1699470364
+Board.gd::GDScript::-1::1699470364::0::1::::<>Node2D<>::
+Board.tscn::PackedScene::6011419182091548006::1699470364::0::1::::<><>::res://Boards/Board.gd<>uid://d37sifvl71gd5<>uid://dy1itqb3wtb67<>uid://buons7dyfdoh5
+CardAndDeckInterface.gd::GDScript::-1::1699469746::0::1::::<>HBoxContainer<>::
+CardAndDeckInterface.tscn::PackedScene::3819921996685721836::1699470077::0::1::::<><>::res://Boards/CardAndDeckInterface.gd<>uid://cb2nwjm8445j1<>uid://wkjqr05fbrvd<>uid://df5oto2vrsfe6<>uid://ctaj7sehr0cll
 ::res://Cards/::1699393925
 CollectableCards.gd::GDScript::-1::1699393830::0::1::::CollectableCards<>Node<>::
 Decks.gd::GDScript::-1::1699393925::0::1::::Decks<>Node<>::
